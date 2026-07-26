@@ -1,0 +1,27 @@
+# Private source material: local ChatGPT conversation export
+/Web 3 - 智能合约部署流程.md
+
+# Secrets and wallet material
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.keystore
+*.seed
+*mnemonic*
+*private-key*
+*private_key*
+
+# Local tooling and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+coverage/
+cache/
+artifacts/
