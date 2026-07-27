@@ -1,6 +1,14 @@
-# Monad Week 1 Build Log
+# Monad CheckIn — Week 1 Mini Demo 0 & Build Log
 
-这是我在 Monad Builder Camp Week 1 的学习与实践记录。Week 1 的核心成果不是一个完整产品，而是走通了从钱包、Solidity 合约到真实测试网部署与交互的最小闭环，并据此选择 Week 2 的 **Tech** 方向。
+这是我在 Monad Builder Camp Week 1 完成的最小链上作品与学习记录。核心成果是将 `CheckIn` 合约部署到 Monad Testnet，完成 Read / Write 交互并用区块浏览器验证真实链上结果；我据此选择 Week 2 的 **Tech** 方向。
+
+| 快速入口 | 内容 |
+| --- | --- |
+| [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
+| [可直接提交文本](SUBMISSION.md) | 按任务的五项提交要求整理，可直接粘贴到任务平台 |
+| [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
+
+以下是完整的 Week 1 Build Log。
 
 ## 1. Week 1 概览
 
