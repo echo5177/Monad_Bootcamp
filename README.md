@@ -12,6 +12,10 @@
 | [AI Collaboration Log 提交入口](WEEK2_AI_COLLABORATION_SUBMISSION.md) | AI 协作记录任务需要提交的公开链接 |
 | [Week 3 Role Statement](WEEK3_ROLE_STATEMENT.md) | 300–500 字团队角色、所需队友和 Proof of Work |
 | [Week 3 Role Statement 提交入口](WEEK3_ROLE_STATEMENT_SUBMISSION.md) | Week 3 角色说明任务需要提交的公开链接 |
+| [Moss 项目认识记录](WEEK2_MOSS_PROJECT_NOTE.md) | Moss 的问题、能力、使用场景、个人理解与 100–200 字分享 |
+| [Moss 项目任务提交入口](WEEK2_MOSS_PROJECT_SUBMISSION.md) | GitHub Profile、Star 证据入口和可直接提交的分享 |
+| [Moss GitHub 探索日志](WEEK2_GITHUB_EXPLORATION_LOG.md) | 目录结构、GitHub 模块、Issue / PR 分析与学习收获 |
+| [GitHub 探索日志提交入口](WEEK2_GITHUB_EXPLORATION_SUBMISSION.md) | 可直接提交的公开日志链接和说明 |
 | [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
 | [Week 1 Mini Demo 提交文本](SUBMISSION.md) | 按 Mini Demo 0 的五项提交要求整理 |
 | [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
