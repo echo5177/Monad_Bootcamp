@@ -1,11 +1,13 @@
-# Monad CheckIn — Week 1 Mini Demo 0 & Build Log
+# Monad Builder Camp — CheckIn Demo & Dev Track
 
-这是我在 Monad Builder Camp Week 1 完成的最小链上作品与学习记录。核心成果是将 `CheckIn` 合约部署到 Monad Testnet，完成 Read / Write 交互并用区块浏览器验证真实链上结果；我据此选择 Week 2 的 **Tech** 方向。
+这是我的 Monad Builder Camp 学习与构建记录。Week 1 我将 `CheckIn` 合约部署到 Monad Testnet，完成 Read / Write 交互并验证真实链上结果；Week 2 我选择 **Dev** 主方向，计划把它扩展为 Community Quest 最小合约。
 
 | 快速入口 | 内容 |
 | --- | --- |
+| [Week 2 Role Choice Card](WEEK2_ROLE_CHOICE_CARD.md) | Dev 选择理由、服务的问题、最小产出、参考资料和 Week 3 角色 |
+| [Week 2 可直接提交文本](WEEK2_ROLE_CHOICE_SUBMISSION.md) | Role Choice Card 任务的平台提交稿 |
 | [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
-| [可直接提交文本](SUBMISSION.md) | 按任务的五项提交要求整理，可直接粘贴到任务平台 |
+| [Week 1 Mini Demo 提交文本](SUBMISSION.md) | 按 Mini Demo 0 的五项提交要求整理 |
 | [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
 
 以下是完整的 Week 1 Build Log。
