@@ -6,6 +6,8 @@
 | --- | --- |
 | [Week 2 Role Choice Card](WEEK2_ROLE_CHOICE_CARD.md) | Dev 选择理由、服务的问题、最小产出、参考资料和 Week 3 角色 |
 | [Week 2 可直接提交文本](WEEK2_ROLE_CHOICE_SUBMISSION.md) | Role Choice Card 任务的平台提交稿 |
+| [Week 2 Role Log](WEEK2_ROLE_LOG.md) | 持续记录资料、Prompt、证据、错误、判断变化和下一步计划 |
+| [Week 2 Role Log 提交入口](WEEK2_ROLE_LOG_SUBMISSION.md) | Role Log 任务需要提交的公开链接和简短说明 |
 | [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
 | [Week 1 Mini Demo 提交文本](SUBMISSION.md) | 按 Mini Demo 0 的五项提交要求整理 |
 | [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
