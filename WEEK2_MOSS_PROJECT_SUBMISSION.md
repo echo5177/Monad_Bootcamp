@@ -11,7 +11,7 @@
 
 ## 提交前检查
 
-- [ ] GitHub Stars 页面中可以看到 `nishuzumi/moss`
+- [x] GitHub Stars 页面中可以看到 `nishuzumi/moss`
 - [x] 分享文字说明了 Moss 解决的问题
 - [x] 分享文字包含未来使用场景
 - [x] 公开记录未包含私钥、助记词、API Key 或 `.env`

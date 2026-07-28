@@ -88,7 +88,7 @@ Moss 把不同责任拆开：
 - GitHub 用户主页：[echo5177](https://github.com/echo5177)
 - GitHub Stars 页面：[echo5177 的 Stars](https://github.com/echo5177?tab=stars)
 - Moss 项目：[nishuzumi/moss](https://github.com/nishuzumi/moss)
-- Star 状态：等待完成 GitHub 写入授权后核验；提交前必须确认 Stars 页面可看到 Moss。
+- Star 状态：已于 2026-07-28 通过 GitHub 公开 Stars 数据确认，列表中包含 `nishuzumi/moss`。
 
 ## 9. 主要资料
 
