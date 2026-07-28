@@ -8,6 +8,10 @@
 | [Week 2 可直接提交文本](WEEK2_ROLE_CHOICE_SUBMISSION.md) | Role Choice Card 任务的平台提交稿 |
 | [Week 2 Role Log](WEEK2_ROLE_LOG.md) | 持续记录资料、Prompt、证据、错误、判断变化和下一步计划 |
 | [Week 2 Role Log 提交入口](WEEK2_ROLE_LOG_SUBMISSION.md) | Role Log 任务需要提交的公开链接和简短说明 |
+| [Week 2 AI Collaboration Log](WEEK2_AI_COLLABORATION_LOG.md) | AI 帮助、人工删改/核查和不可委托事项 |
+| [AI Collaboration Log 提交入口](WEEK2_AI_COLLABORATION_SUBMISSION.md) | AI 协作记录任务需要提交的公开链接 |
+| [Week 3 Role Statement](WEEK3_ROLE_STATEMENT.md) | 300–500 字团队角色、所需队友和 Proof of Work |
+| [Week 3 Role Statement 提交入口](WEEK3_ROLE_STATEMENT_SUBMISSION.md) | Week 3 角色说明任务需要提交的公开链接 |
 | [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
 | [Week 1 Mini Demo 提交文本](SUBMISSION.md) | 按 Mini Demo 0 的五项提交要求整理 |
 | [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
