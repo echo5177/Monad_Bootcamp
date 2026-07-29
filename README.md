@@ -16,6 +16,14 @@
 | [Moss 项目任务提交入口](WEEK2_MOSS_PROJECT_SUBMISSION.md) | GitHub Profile、Star 证据入口和可直接提交的分享 |
 | [Moss GitHub 探索日志](WEEK2_GITHUB_EXPLORATION_LOG.md) | 目录结构、GitHub 模块、Issue / PR 分析与学习收获 |
 | [GitHub 探索日志提交入口](WEEK2_GITHUB_EXPLORATION_SUBMISSION.md) | 可直接提交的公开日志链接和说明 |
+| [Week 2 Challenge 提交总表](WEEK2_CHALLENGE_SUBMISSION_INDEX.md) | 所有 Challenge 的完成状态、互斥规则和逐项提交入口 |
+| [开源贡献计划](WEEK2_OPEN_SOURCE_CONTRIBUTION_PLAN.md) | Builder 身份、Pyth Adapter 选题、目标、产出、计划和风险 |
+| [Moss 介绍文章](WEEK2_MOSS_INTRO_ARTICLE.md) | Moss 工作流、安全边界、使用场景与 Pyth 贡献 |
+| [Moss 新手教程](WEEK2_MOSS_BEGINNER_TUTORIAL.md) | 从安装构建到真实 Monad Pyth Query 的可执行教程 |
+| [Open Source Contribution Log](WEEK2_OPEN_SOURCE_CONTRIBUTION_LOG.md) | PR、分批 commit、测试、链上证据、失败修复与人工判断 |
+| [第一个 Moss PR 提交入口](WEEK2_FIRST_MOSS_PR_SUBMISSION.md) | PR、GitHub Profile、分支和 commit 证据 |
+| [Protocol Adapter 提交入口](WEEK2_PROTOCOL_ADAPTER_SUBMISSION.md) | Adapter 名称、功能说明、PR 和 package 证据 |
+| [Proof of Work 提交入口](WEEK2_PROOF_OF_WORK_SUBMISSION.md) | 本周公开作品及贡献日志 |
 | [Mini Demo 0 作品页](MINI_DEMO_0.md) | 面向评审的演示说明、链上证据、AI/人工边界与后续方向 |
 | [Week 1 Mini Demo 提交文本](SUBMISSION.md) | 按 Mini Demo 0 的五项提交要求整理 |
 | [CheckIn 合约](contracts/CheckIn.sol) | 本次部署和交互使用的 Solidity 源码 |
