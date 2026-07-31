@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Monad Price Lens reads official Pyth price feeds on Monad and explains price, confidence, publish time and freshness without a wallet."
+    />
+    <title>Monad Price Lens</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238d6cff'/%3E%3Cpath d='M14 45V19h8l10 14 10-14h8v26h-8V31L32 44 22 31v14z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="Monad Price Lens 首页">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Monad Price Lens</span>
+      </a>
+      <nav aria-label="页面导航">
+        <a href="#demo">Live demo</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#team">Team</a>
+      </nav>
+      <span class="network-pill"><i></i> Monad Mainnet</span>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="eyebrow">PYTH DATA, EXPLAINED ON MONAD</div>
+        <h1>看见价格，也看见它的<br /><span>可信边界与时间。</span></h1>
+        <p class="hero-copy">
+          一次只读查询，把 Pyth 原始返回值转换为价格、Confidence、发布时间和新鲜度。无需钱包，不签名，不交易。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">读取真实价格 <span>↘</span></a>
+          <a class="button ghost" href="https://github.com/echo5177/Monad_Bootcamp" target="_blank" rel="noreferrer">查看源码</a>
+        </div>
+        <div class="signal-row" aria-label="产品特点">
+          <span>01 / Real eth_call</span>
+          <span>02 / No wallet</span>
+          <span>03 / Source visible</span>
+        </div>
+      </section>
+
+      <section class="demo-section shell" id="demo">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">LIVE ORACLE READER</span>
+            <h2>选择 Feed，读取一条链上事实</h2>
+          </div>
+          <p>查询直接发送到 Monad 公共 RPC。页面不保存地址、账户或个人数据。</p>
+        </div>
+
+        <div class="demo-grid">
+          <form class="control-panel" id="price-form">
+            <div class="panel-label">QUERY SETTINGS</div>
+            <label for="feed-select">Price feed</label>
+            <div class="select-wrap">
+              <select id="feed-select" name="feed">
+                <option value="MON_USD">MON / USD</option>
+                <option value="BTC_USD">BTC / USD</option>
+                <option value="ETH_USD">ETH / USD</option>
+              </select>
+            </div>
+
+            <label for="age-select">Maximum age</label>
+            <div class="select-wrap">
+              <select id="age-select" name="maxAge">
+                <option value="60">60 seconds</option>
+                <option value="300">5 minutes</option>
+                <option value="900">15 minutes</option>
+                <option value="3600" selected>1 hour</option>
+              </select>
+            </div>
+
+            <button class="query-button" id="query-button" type="submit">
+              <span>Read from Monad</span><span aria-hidden="true">→</span>
+            </button>
+
+            <div class="safety-note">
+              <strong>READ ONLY</strong>
+              <span>不会请求钱包连接、签名或资产授权。</span>
+            </div>
+          </form>
+
+          <article class="result-card" aria-live="polite" aria-busy="false">
+            <div class="result-topline">
+              <span id="pair-label">MON / USD</span>
+              <span class="freshness waiting" id="freshness-badge">WAITING</span>
+            </div>
+
+            <div class="price-zone">
+              <span class="currency">USD</span>
+              <strong id="price-value">—</strong>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric">
+                <span>Confidence (conf)</span>
+                <strong id="confidence-value">—</strong>
+              </div>
+              <div class="metric">
+                <span>Published</span>
+                <strong id="published-relative">—</strong>
+              </div>
+              <div class="metric wide">
+                <span>Exact publish time</span>
+                <strong id="published-exact">点击读取后显示</strong>
+              </div>
+            </div>
+
+            <p class="status-copy" id="status-copy">请选择 Feed 并读取真实链上数据。</p>
+
+            <details class="evidence-details" id="evidence">
+              <summary>查看链上来源与原始数据 <span>+</span></summary>
+              <dl>
+                <div><dt>Network</dt><dd>Monad Mainnet · Chain ID 143</dd></div>
+                <div><dt>Pyth contract</dt><dd><code id="contract-value"></code></dd></div>
+                <div><dt>Feed ID</dt><dd><code id="feed-id-value"></code></dd></div>
+                <div><dt>Raw price</dt><dd><code id="raw-price">—</code></dd></div>
+                <div><dt>Raw conf</dt><dd><code id="raw-conf">—</code></dd></div>
+                <div><dt>Exponent</dt><dd><code id="raw-expo">—</code></dd></div>
+                <div><dt>Raw response</dt><dd><code id="raw-response">—</code></dd></div>
+              </dl>
+              <div class="source-links">
+                <a href="https://docs.pyth.network/price-feeds/core/contract-addresses/evm" target="_blank" rel="noreferrer">Pyth contract addresses ↗</a>
+                <a href="https://api-reference.pyth.network/price-feeds/evm/getPriceNoOlderThan" target="_blank" rel="noreferrer">Method reference ↗</a>
+              </div>
+            </details>
+
+            <button class="copy-button" id="copy-button" type="button" disabled>Copy result summary</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="explain-section shell">
+        <div class="section-heading compact">
+          <div>
+            <span class="kicker">WHAT THE NUMBERS MEAN</span>
+            <h2>一条价格，不止一个数字</h2>
+          </div>
+        </div>
+        <div class="explain-grid">
+          <article><span>01</span><h3>Price × 10<sup>expo</sup></h3><p>Pyth 用整数和指数表达价格。页面完成换算，同时保留原始字段供你复核。</p></article>
+          <article><span>02</span><h3>Confidence</h3><p>它描述价格估计周围的不确定范围，不是未来涨跌预测，也不是收益保证。</p></article>
+          <article><span>03</span><h3>Publish time</h3><p>数据写到链上不代表永远新鲜。发布时间与 maxAge 一起决定本次查询能否通过。</p></article>
+        </div>
+      </section>
+
+      <section class="team-section shell" id="team">
+        <div class="section-heading compact">
+          <div><span class="kicker">PRISM FORGE</span><h2>四个固定角色，一个最终责任人</h2></div>
+          <p>三个角色 Agent 提供独立意见，Violet 负责事实核对、取舍与发布。</p>
+        </div>
+        <div class="team-grid">
+          <article><img src="./avatars/violet.svg" alt="Violet，紫色六角恐龙抱着终端窗口" /><div><strong>Violet</strong><span>Dev Owner</span></div></article>
+          <article><img src="./avatars/lan-zhou.svg" alt="岚舟，靛蓝猫头鹰握着银色指南针" /><div><strong>岚舟</strong><span>Research</span></div></article>
+          <article><img src="./avatars/cheng-zi.svg" alt="橙子，橙色狐狸拿着便携扩音器" /><div><strong>橙子</strong><span>Ops</span></div></article>
+          <article><img src="./avatars/mo-chi.svg" alt="墨尺，青绿色机械猫拿着折叠尺" /><div><strong>墨尺</strong><span>Product & UX</span></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p>Educational read-only demo. Freshness is not accuracy, safety, or investment advice.</p>
+      <a href="https://github.com/echo5177/Monad_Bootcamp/blob/main/WEEK3_SUBMISSION_INDEX.md" target="_blank" rel="noreferrer">Week 3 Build Log ↗</a>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
