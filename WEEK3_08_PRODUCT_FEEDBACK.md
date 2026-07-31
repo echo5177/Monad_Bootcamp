@@ -35,9 +35,18 @@ V1 测试对象是 [Monad Price Lens V1 截图](docs/screenshots/monad-price-len
 
 ## 真人反馈边界
 
-本任务原文要求邀请至少三名外部同学。当前已经完成三视角 AI 预检和公开招募入口，但**不能把它们提交成三名真人同学反馈**。真人部分仍需在公开 Demo 发布后补充。
+本任务原文要求邀请至少三名外部同学。当前已经完成三视角 AI 预检、公开招募入口和三名真实训练营参与者的邀请，但**不能把 AI 预检提交成三名真人同学反馈**。收到真人回复后才能补完反馈结果。
 
 公开招募入口：[GitHub Feedback Issue #1](https://github.com/echo5177/Monad_Bootcamp/issues/1)
+
+### 真实邀请记录
+
+2026-07-31 23:11（UTC+8），在自己的公开 Feedback Issue 中邀请了三名拥有公开训练营笔记或作品的参与者：`@Kokaro233`、`@Yunshiro`、`@Tuskiand`。邀请包含在线 Demo、三个体验问题、无需钱包和可直接忽略的说明，没有在对方仓库刷评论。
+
+- [公开邀请评论](https://github.com/echo5177/Monad_Bootcamp/issues/1#issuecomment-5144421223)
+- 截图时真人回复数：0
+
+![向三名公开训练营参与者发出的体验邀请](docs/screenshots/feedback-invitation-issue.png)
 
 可直接发送给同学的邀请：
 
@@ -51,4 +60,4 @@ V1 测试对象是 [Monad Price Lens V1 截图](docs/screenshots/monad-price-len
 
 ## 可直接提交的说明
 
-已完成三名外部 AI 测试者的独立预检、五条反馈归纳和公开反馈 Issue，并明确标注 AI 身份。若平台严格要求“外部同学”，请先取得三条真人回复再把本页状态改为完成。
+已完成三名外部 AI 测试者的独立预检、五条反馈归纳、公开反馈 Issue，并已向三名真实训练营参与者发出邀请。当前仍需等待三条真人回复，不能用 AI 结果替代。

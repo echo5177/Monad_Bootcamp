@@ -21,7 +21,7 @@
 | 5 | 团队脑暴会 | [WEEK3_05_BRAINSTORM_RECORD.md](WEEK3_05_BRAINSTORM_RECORD.md) | 40 分钟记录、每人想法、入选方向、放弃方案、行动和 Owner |
 | 6 | 团队计划 | [WEEK3_06_TEAM_PLAN.md](WEEK3_06_TEAM_PLAN.md) | 五个里程碑、负责人、具体产出、验收和状态 |
 | 7 | 团队决定与 AI 使用日志 | [WEEK3_07_DECISION_AI_LOG.md](WEEK3_07_DECISION_AI_LOG.md) | 决策、删减范围、每人贡献、AI 帮助、人工核查、阻塞和下一步 |
-| 8 | 产品体验与反馈 | [WEEK3_08_PRODUCT_FEEDBACK.md](WEEK3_08_PRODUCT_FEEDBACK.md) | V1 截图、三视角 AI 预检、反馈归纳、公开招募 Issue；三名真人反馈仍需补齐 |
+| 8 | 产品体验与反馈 | [WEEK3_08_PRODUCT_FEEDBACK.md](WEEK3_08_PRODUCT_FEEDBACK.md) | V1 截图、三视角 AI 预检、三名真实参与者邀请与截图；等待三条真人反馈 |
 | 9 | 根据反馈改进 | [WEEK3_09_FEEDBACK_ITERATION.md](WEEK3_09_FEEDBACK_ITERATION.md) | 采用与未采用反馈、V1/V2 截图、代码变化和测试结果 |
 | 10 | 体验其他团队产品 | [WEEK3_10_OTHER_PRODUCT_EXPERIENCE.md](WEEK3_10_OTHER_PRODUCT_EXPERIENCE.md) | Monad Omikuji 链接、实际体验步骤、优缺点、启发和截图 |
 | 11 | 团队 Mini Demo | [WEEK3_11_MINI_DEMO.md](WEEK3_11_MINI_DEMO.md) | 在线 Demo、仓库、截图、使用方法、三分钟讲稿、分工、真实/Mock 和作品集一句话 |
@@ -36,7 +36,7 @@
 5. 脑暴后选择 Price Lens，放弃钱包、交易、预测和历史 Dashboard。
 6. 五个里程碑覆盖团队、验证、开发、反馈改进和最终 Demo。
 7. AI 提供独立角色意见，Violet 对链上事实、安全和发布做最终核查。
-8. 已完成三个 AI 预检并开启公开 Issue；不能把它们写成三名真人同学。
+8. 已完成三个 AI 预检，并向三名真实训练营参与者发出公开邀请；当前等待回复。
 9. V2 根据反馈补充了置信比例、价格区间、时区、区块锚点和可访问性。
 10. 我实际进入 Monad Omikuji 的访客祈愿流程，没有连接钱包或冒充链上交易。
 11. Mini Demo 已通过 GitHub Pages 公开，可在三分钟内完成演示。

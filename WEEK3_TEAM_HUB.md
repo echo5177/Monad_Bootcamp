@@ -45,6 +45,6 @@
 | Done | 根据反馈改进 V2 | Violet + 墨尺 | [前后对比、V2 截图](WEEK3_09_FEEDBACK_ITERATION.md) |
 | Done | 体验另一团队作品 | Violet | [作品链接、截图、体验结论](WEEK3_10_OTHER_PRODUCT_EXPERIENCE.md) |
 | Done | Mini Demo 与复盘 | 全队 | [作品页](WEEK3_11_MINI_DEMO.md)、[Week 4 决定](WEEK3_12_HACKATHON_RETRO.md) |
-| Ready | 三名真人同学体验 | 橙子 + Violet | [公开 Feedback Issue](https://github.com/echo5177/Monad_Bootcamp/issues/1) 的三条真实回复 |
+| Doing | 三名真人同学体验 | 橙子 + Violet | [邀请已发出](https://github.com/echo5177/Monad_Bootcamp/issues/1#issuecomment-5144421223)，等待三条真实回复 |
 
 沟通载体是当前 Codex 团队任务，公开协作记录和看板以本文件为准。

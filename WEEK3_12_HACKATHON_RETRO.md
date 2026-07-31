@@ -14,7 +14,7 @@ Monad Price Lens 已经证明三件事：浏览器能直接读取 Monad 上的 P
 - 发布 GitHub Pages，保留 V1/V2 两份截图和测试。
 - 完成三个独立 AI 体验预检，并把反馈落到 Confidence、时区、区块锚点和可访问性。
 - 实际体验另一位训练营成员的 Monad Omikuji，并记录启发。
-- 建立公开反馈 Issue，等待三名真人同学回复。
+- 建立公开反馈 Issue，并向三名公开训练营参与者发出邀请；当前等待真人回复。
 
 ## Week 4 计划
 
