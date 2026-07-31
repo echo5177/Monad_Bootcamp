@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Lan Zhou</title><desc id="desc">An indigo owl holding a silver compass</desc>
+  <rect width="240" height="240" rx="48" fill="#111a3a"/>
+  <path d="M45 55 86 70h68l41-15-12 54c0 48-25 82-63 82s-63-34-63-82z" fill="#4856a8" stroke="#8894e8" stroke-width="7"/>
+  <circle cx="91" cy="104" r="27" fill="#e5e7eb"/><circle cx="149" cy="104" r="27" fill="#e5e7eb"/>
+  <circle cx="91" cy="104" r="9" fill="#111a3a"/><circle cx="149" cy="104" r="9" fill="#111a3a"/>
+  <path d="m120 112-12 17h24z" fill="#f7c948"/>
+  <circle cx="171" cy="174" r="34" fill="#d7dce5" stroke="#fff" stroke-width="5"/>
+  <circle cx="171" cy="174" r="24" fill="#1b254f"/>
+  <path d="m171 151 7 20-7 26-7-20z" fill="#f4f7ff"/><circle cx="171" cy="174" r="5" fill="#f7c948"/>
+</svg>

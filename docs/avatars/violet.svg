@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Violet</title><desc id="desc">A violet axolotl holding a terminal window</desc>
+  <rect width="240" height="240" rx="48" fill="#17132d"/>
+  <circle cx="120" cy="105" r="58" fill="#9f7aea"/>
+  <path d="M65 86 31 55l8 42-27 14 47 12M175 86l34-31-8 42 27 14-47 12" fill="#c4a7ff" stroke="#6941c6" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="96" cy="101" r="7" fill="#17132d"/><circle cx="144" cy="101" r="7" fill="#17132d"/>
+  <path d="M101 126q19 16 38 0" fill="none" stroke="#17132d" stroke-width="7" stroke-linecap="round"/>
+  <rect x="54" y="151" width="132" height="61" rx="9" fill="#0b1020" stroke="#ddd6fe" stroke-width="6"/>
+  <path d="m76 175 13 10-13 10M103 196h39" fill="none" stroke="#7ef9d9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

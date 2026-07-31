@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Cheng Zi</title><desc id="desc">An orange fox holding a portable megaphone</desc>
+  <rect width="240" height="240" rx="48" fill="#2c1710"/>
+  <path d="M49 50 92 76h56l43-26-12 76c-9 39-31 62-59 62s-50-23-59-62z" fill="#f28c28" stroke="#ffbd6b" stroke-width="7"/>
+  <path d="m49 50 43 26-30 18zM191 50l-43 26 30 18z" fill="#ffe1bd"/>
+  <circle cx="94" cy="111" r="7" fill="#2c1710"/><circle cx="146" cy="111" r="7" fill="#2c1710"/>
+  <path d="m120 125-12 10 12 9 12-9z" fill="#2c1710"/>
+  <path d="M149 155 216 132v51l-67-23z" fill="#f7f1e8" stroke="#2c1710" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="133" y="151" width="22" height="18" rx="5" fill="#ffd166" stroke="#2c1710" stroke-width="5"/>
+  <path d="m174 166 12 37h-19l-13-42" fill="#ffd166" stroke="#2c1710" stroke-width="6" stroke-linejoin="round"/>
+</svg>
