@@ -31,7 +31,7 @@
         <div class="eyebrow">PYTH DATA, EXPLAINED ON MONAD</div>
         <h1>看见价格，也看见它的<br /><span>可信边界与时间。</span></h1>
         <p class="hero-copy">
-          一次只读查询，把 Pyth 原始返回值转换为价格、Confidence、发布时间和新鲜度。无需钱包，不签名，不交易。
+          一次只读查询，把 Pyth 原始返回值转换为价格、置信区间、发布时间和新鲜度。无需钱包，不签名，不交易。
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#demo">读取真实价格 <span>↘</span></a>
@@ -54,8 +54,8 @@
         </div>
 
         <div class="demo-grid">
-          <form class="control-panel" id="price-form">
-            <div class="panel-label">QUERY SETTINGS</div>
+          <form class="control-panel" id="price-form" aria-labelledby="query-settings-label">
+            <div class="panel-label" id="query-settings-label">QUERY SETTINGS</div>
             <label for="feed-select">Price feed</label>
             <div class="select-wrap">
               <select id="feed-select" name="feed">
@@ -85,7 +85,7 @@
             </div>
           </form>
 
-          <article class="result-card" aria-live="polite" aria-busy="false">
+          <article class="result-card" aria-busy="false">
             <div class="result-topline">
               <span id="pair-label">MON / USD</span>
               <span class="freshness waiting" id="freshness-badge">WAITING</span>
@@ -98,8 +98,11 @@
 
             <div class="metric-grid">
               <div class="metric">
-                <span>Confidence (conf)</span>
+                <span>Confidence range</span>
                 <strong id="confidence-value">—</strong>
+                <small class="metric-note" id="confidence-percent">占价格比例：—</small>
+                <small class="metric-note" id="confidence-range">价格区间：—</small>
+                <small class="metric-explain">这是当前价格估计的 ± 不确定范围，不是涨跌预测。</small>
               </div>
               <div class="metric">
                 <span>Published</span>
@@ -111,13 +114,17 @@
               </div>
             </div>
 
-            <p class="status-copy" id="status-copy">请选择 Feed 并读取真实链上数据。</p>
+            <p class="status-copy" id="status-copy" role="status" aria-live="polite" aria-atomic="true">请选择 Feed 并读取真实链上数据。</p>
 
             <details class="evidence-details" id="evidence">
               <summary>查看链上来源与原始数据 <span>+</span></summary>
               <dl>
                 <div><dt>Network</dt><dd>Monad Mainnet · Chain ID 143</dd></div>
+                <div><dt>RPC endpoint</dt><dd><code>https://rpc.monad.xyz</code></dd></div>
+                <div><dt>Block</dt><dd><code id="block-number">—</code></dd></div>
+                <div><dt>Queried at</dt><dd><code id="query-time">—</code></dd></div>
                 <div><dt>Pyth contract</dt><dd><code id="contract-value"></code></dd></div>
+                <div><dt>Contract status</dt><dd>Current on 2026-07-31; Pyth announced a Monad upgrade for 2026-08-18</dd></div>
                 <div><dt>Feed ID</dt><dd><code id="feed-id-value"></code></dd></div>
                 <div><dt>Raw price</dt><dd><code id="raw-price">—</code></dd></div>
                 <div><dt>Raw conf</dt><dd><code id="raw-conf">—</code></dd></div>

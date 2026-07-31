@@ -16,12 +16,15 @@ const ageSelect = document.querySelector("#age-select");
 const queryButton = document.querySelector("#query-button");
 const copyButton = document.querySelector("#copy-button");
 const card = document.querySelector(".result-card");
+const evidenceDetails = document.querySelector("#evidence");
 
 const elements = {
   pair: document.querySelector("#pair-label"),
   freshness: document.querySelector("#freshness-badge"),
   price: document.querySelector("#price-value"),
   confidence: document.querySelector("#confidence-value"),
+  confidencePercent: document.querySelector("#confidence-percent"),
+  confidenceRange: document.querySelector("#confidence-range"),
   publishedRelative: document.querySelector("#published-relative"),
   publishedExact: document.querySelector("#published-exact"),
   status: document.querySelector("#status-copy"),
@@ -31,6 +34,8 @@ const elements = {
   rawConf: document.querySelector("#raw-conf"),
   rawExpo: document.querySelector("#raw-expo"),
   rawResponse: document.querySelector("#raw-response"),
+  blockNumber: document.querySelector("#block-number"),
+  queryTime: document.querySelector("#query-time"),
 };
 
 elements.contract.textContent = PYTH_CONTRACT;
@@ -49,6 +54,8 @@ function setLoading(feed) {
   elements.pair.textContent = feed.label;
   elements.price.textContent = "…";
   elements.confidence.textContent = "…";
+  elements.confidencePercent.textContent = "占价格比例：…";
+  elements.confidenceRange.textContent = "价格区间：…";
   elements.publishedRelative.textContent = "…";
   elements.publishedExact.textContent = "正在请求公共 RPC";
   elements.status.textContent = "正在执行只读 eth_call，不会触发钱包或交易。";
@@ -61,13 +68,15 @@ function setError(error) {
   queryButton.firstElementChild.textContent = "Retry from Monad";
   elements.price.textContent = "No result";
   elements.confidence.textContent = "—";
+  elements.confidencePercent.textContent = "占价格比例：—";
+  elements.confidenceRange.textContent = "价格区间：—";
   elements.publishedRelative.textContent = "—";
   elements.publishedExact.textContent = "查询失败，没有展示缓存价格";
   elements.status.textContent = `${error.message} 若 maxAge 很小，合约也可能因数据超过阈值而拒绝查询。`;
   setBadge("error", "QUERY FAILED");
 }
 
-async function rpcCall(data) {
+async function rpcRequest(method, params) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 12_000);
 
@@ -78,8 +87,8 @@ async function rpcCall(data) {
       body: JSON.stringify({
         jsonrpc: "2.0",
         id: Date.now(),
-        method: "eth_call",
-        params: [{ to: PYTH_CONTRACT, data }, "latest"],
+        method,
+        params,
       }),
       signal: controller.signal,
     });
@@ -97,29 +106,41 @@ async function rpcCall(data) {
   }
 }
 
-function renderResult(feed, maxAge, decoded, rawResponse) {
+function renderResult(feed, maxAge, decoded, rawResponse, blockNumber) {
   const now = Math.floor(Date.now() / 1000);
   const age = Math.max(0, now - decoded.publishTime);
   const state = freshnessState(age, maxAge);
   const price = formatScaled(decoded.price, decoded.expo);
   const confidence = formatScaled(decoded.conf, decoded.expo);
   const confidenceRatio = confidencePercent(decoded.price, decoded.conf);
+  const lowerBound = formatScaled(decoded.price - decoded.conf, decoded.expo);
+  const upperBound = formatScaled(decoded.price + decoded.conf, decoded.expo);
+  const queriedAt = new Date();
   const exactTime = new Date(decoded.publishTime * 1000).toLocaleString(undefined, {
-    dateStyle: "medium",
-    timeStyle: "medium",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short",
   });
 
   elements.pair.textContent = feed.label;
   elements.price.textContent = price;
   elements.confidence.textContent = `± $${confidence}`;
+  elements.confidencePercent.textContent = `占价格比例：${confidenceRatio === null ? "N/A" : `${confidenceRatio.toFixed(4)}%`}`;
+  elements.confidenceRange.textContent = `价格区间：$${lowerBound} – $${upperBound}`;
   elements.publishedRelative.textContent = relativeAge(age);
   elements.publishedExact.textContent = exactTime;
-  elements.status.textContent = `这条数据发布于 ${age} 秒前，本次查询允许的最大数据年龄是 ${maxAge} 秒。`;
+  elements.status.textContent = `${state.label} 只表示数据发布于 ${age} 秒前，满足你选择的 maxAge=${maxAge} 秒；不代表价格无误差、交易安全或适合投资。`;
   elements.feedId.textContent = feed.id;
   elements.rawPrice.textContent = decoded.price.toString();
   elements.rawConf.textContent = decoded.conf.toString();
   elements.rawExpo.textContent = decoded.expo.toString();
   elements.rawResponse.textContent = rawResponse;
+  elements.blockNumber.textContent = blockNumber.toLocaleString("en-US");
+  elements.queryTime.textContent = queriedAt.toISOString();
   setBadge(state.key, state.label);
 
   latestSummary = [
@@ -128,6 +149,9 @@ function renderResult(feed, maxAge, decoded, rawResponse) {
     `Confidence: ±$${confidence}${confidenceRatio === null ? "" : ` (${confidenceRatio.toFixed(4)}%)`}`,
     `Published: ${exactTime} (${age}s ago)`,
     `Freshness: ${state.label} under maxAge=${maxAge}s`,
+    `Block: ${blockNumber}`,
+    `Queried at: ${queriedAt.toISOString()}`,
+    `RPC: ${RPC_URL}`,
     `Pyth contract: ${PYTH_CONTRACT}`,
     `Feed ID: ${feed.id}`,
     "Read-only educational result. Not investment advice.",
@@ -147,9 +171,10 @@ async function queryPrice() {
 
   try {
     const callData = encodeGetPriceNoOlderThan(feed.id, maxAge);
-    const rawResponse = await rpcCall(callData);
+    const blockHex = await rpcRequest("eth_blockNumber", []);
+    const rawResponse = await rpcRequest("eth_call", [{ to: PYTH_CONTRACT, data: callData }, blockHex]);
     const decoded = decodePriceResponse(rawResponse);
-    renderResult(feed, maxAge, decoded, rawResponse);
+    renderResult(feed, maxAge, decoded, rawResponse, Number(BigInt(blockHex)));
   } catch (error) {
     setError(error instanceof Error ? error : new Error("Unknown query error."));
   }
@@ -173,6 +198,10 @@ copyButton.addEventListener("click", async () => {
   } catch {
     copyButton.textContent = "Copy unavailable";
   }
+});
+
+document.querySelector('a[href="#evidence"]')?.addEventListener("click", () => {
+  evidenceDetails.open = true;
 });
 
 elements.feedId.textContent = FEEDS.MON_USD.id;

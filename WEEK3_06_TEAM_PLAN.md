@@ -6,9 +6,9 @@
 | --- | --- | --- | --- | --- | --- |
 | Day 1 | Builder Profile、组队与协作规则 | Violet + 全队 | 角色卡、Team Hub、固定头像 | 每名成员有责任声明和证据类型 | Done |
 | Day 2 | 问题验证与 MVP 收敛 | 岚舟 + 墨尺 | Problem Card、来源、流程、非目标 | 问题有官方事实支撑，只有一个核心功能 | Done |
-| Day 3 | 实现 Monad Price Lens V1 | Violet | 静态网页、真实 `eth_call`、V1 截图 | 三个 Feed 可查；错误不伪装成功 | Doing |
-| Day 4 | 体验预检与产品改进 | 橙子 + 墨尺 + Violet | 三份反馈、改动记录、V2 截图 | 至少采纳一项反馈并展示前后差异 | Ready |
-| Day 5 | 其他作品体验、Demo 与复盘 | 全队 | 体验报告、三分钟讲稿、提交索引、Week 4 决定 | 12 项任务均有公开入口 | Ready |
+| Day 3 | 实现 Monad Price Lens V1 | Violet | 静态网页、真实 `eth_call`、V1 截图 | 三个 Feed 可查；错误不伪装成功 | Done |
+| Day 4 | 体验预检与产品改进 | 橙子 + 墨尺 + Violet | 三份反馈、改动记录、V2 截图 | 至少采纳一项反馈并展示前后差异 | Done |
+| Day 5 | 其他作品体验、Demo 与复盘 | 全队 | 体验报告、三分钟讲稿、提交索引、Week 4 决定 | 12 项任务均有公开入口 | Done |
 
 ## 个人可检查任务
 

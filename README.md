@@ -1,9 +1,14 @@
 # Monad Builder Camp — CheckIn Demo & Dev Track
 
-这是我的 Monad Builder Camp 学习与构建记录。Week 1 我将 `CheckIn` 合约部署到 Monad Testnet，完成 Read / Write 交互并验证真实链上结果；Week 2 我选择 **Dev** 主方向，计划把它扩展为 Community Quest 最小合约。
+这是我的 Monad Builder Camp 学习与构建记录。Week 1 我将 `CheckIn` 合约部署到 Monad Testnet，完成 Read / Write 交互并验证真实链上结果；Week 2 我选择 **Dev** 并向 Moss 提交 Pyth Adapter；Week 3 我发布了 **Monad Price Lens**，用无需钱包的网页解释 Monad 上的 Pyth 价格、置信区间与新鲜度。
 
 | 快速入口 | 内容 |
 | --- | --- |
+| [Monad Price Lens 在线 Demo](https://echo5177.github.io/Monad_Bootcamp/) | Week 3 可运行作品，真实读取 Monad Mainnet Pyth PriceFeed |
+| [Week 3 提交总表](WEEK3_SUBMISSION_INDEX.md) | 12 项任务的公开提交页、提交内容和完成边界 |
+| [Week 3 Mini Demo](WEEK3_11_MINI_DEMO.md) | 使用方式、三分钟讲稿、团队分工、真实/Mock 与作品集描述 |
+| [Week 3 Team Hub](WEEK3_TEAM_HUB.md) | 固定角色、形象、协作规则、看板和安全边界 |
+| [Week 3 反馈改进](WEEK3_09_FEEDBACK_ITERATION.md) | V1/V2 截图、采用反馈与浏览器验证 |
 | [Week 2 Role Choice Card](WEEK2_ROLE_CHOICE_CARD.md) | Dev 选择理由、服务的问题、最小产出、参考资料和 Week 3 角色 |
 | [Week 2 可直接提交文本](WEEK2_ROLE_CHOICE_SUBMISSION.md) | Role Choice Card 任务的平台提交稿 |
 | [Week 2 Role Log](WEEK2_ROLE_LOG.md) | 持续记录资料、Prompt、证据、错误、判断变化和下一步计划 |

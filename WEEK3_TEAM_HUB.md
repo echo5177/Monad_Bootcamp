@@ -40,10 +40,11 @@
 | Done | 问题与用户范围 | 墨尺 | [Problem & Mini Demo Card](WEEK3_03_PROBLEM_DEMO_CARD.md) |
 | Done | Pyth 字段与来源核对 | 岚舟 | [Dev Validation](WEEK3_04_DEV_VALIDATION.md) |
 | Done | 协作与测试流程 | 橙子 | [Team Plan](WEEK3_06_TEAM_PLAN.md) |
-| Doing | Monad Price Lens V1 | Violet | 页面、源码、V1 截图 |
-| Ready | 三视角体验预检 | 外部测试 Agents | 匿名反馈记录 |
-| Ready | 根据反馈改进 V2 | Violet + 墨尺 | 前后对比、V2 截图 |
-| Ready | 体验另一团队作品 | Violet | 作品链接、截图、体验结论 |
-| Ready | Mini Demo 与复盘 | 全队 | 作品页、讲稿、Week 4 决定 |
+| Done | Monad Price Lens V1 | Violet | 页面、源码、V1 截图 |
+| Done | 三视角体验预检 | 外部测试 Agents | [匿名 AI 反馈记录](WEEK3_08_PRODUCT_FEEDBACK.md) |
+| Done | 根据反馈改进 V2 | Violet + 墨尺 | [前后对比、V2 截图](WEEK3_09_FEEDBACK_ITERATION.md) |
+| Done | 体验另一团队作品 | Violet | [作品链接、截图、体验结论](WEEK3_10_OTHER_PRODUCT_EXPERIENCE.md) |
+| Done | Mini Demo 与复盘 | 全队 | [作品页](WEEK3_11_MINI_DEMO.md)、[Week 4 决定](WEEK3_12_HACKATHON_RETRO.md) |
+| Ready | 三名真人同学体验 | 橙子 + Violet | [公开 Feedback Issue](https://github.com/echo5177/Monad_Bootcamp/issues/1) 的三条真实回复 |
 
 沟通载体是当前 Codex 团队任务，公开协作记录和看板以本文件为准。
